@@ -1,8 +1,14 @@
 import React from "react";
 import logo from "../../assets/logo.png";
 import main from "../../assets/main.svg";
+import { useNavigate } from "react-router";
 
 const Home: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleClick = (event: React.MouseEvent) => {
+    navigate("login");
+  };
   return (
     <main className="block">
       {/* Navbar */}
@@ -25,7 +31,10 @@ const Home: React.FC = () => {
             nisi quia, quam repellat iure praesentium consequatur est molestias
             quod vero ducimus harum.
           </p>
-          <button className="w-fit h-fit border-s-sky-700 bg-sky-700 text-gray-50 rounded py-2 px-5">
+          <button
+            className="w-fit h-fit border-s-sky-700 bg-sky-700 text-gray-50 rounded py-2 px-5"
+            onClick={handleClick}
+          >
             Login / Register
           </button>
         </div>
