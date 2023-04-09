@@ -1,7 +1,7 @@
 import React from "react";
-import logo from "../../assets/logo.png";
 import main from "../../assets/main.svg";
 import { useNavigate } from "react-router";
+import LogoWithTitle from "../../components/LogoWithTitle";
 
 const Home: React.FC = () => {
   const navigate = useNavigate();
@@ -13,10 +13,14 @@ const Home: React.FC = () => {
     <main className="block">
       {/* Navbar */}
       <nav className="my-0 mx-auto w-11/12 max-w-6xl h-24 flex items-center justify-start">
-        <div className="flex flex-row items-center justify-center gap-2">
-          <img src={logo} alt="logo" className="w-8 h-8" />
-          <p className="text-sky-600 font-bold text-4xl leading-9">JobHub</p>
-        </div>
+        <LogoWithTitle
+          logoWidth="w-8"
+          logoHeight="h-8"
+          titleTextSize="text-4xl"
+          titleTextBold="font-bold"
+          titleTextColor="text-sky-600"
+          titleTextLineHeight="leading-9"
+        />
       </nav>
 
       {/* Description and the image */}

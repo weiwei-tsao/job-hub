@@ -25,18 +25,18 @@ const router = createBrowserRouter([
         // login page
         path: "login",
         element: <Login />,
-        loader: async () => {
-          throw new Response("Unauthorized", { status: 401 });
-        },
+        // loader: async () => {
+        //   throw new Response("Unauthorized", { status: 401 });
+        // },
         errorElement: <ErrorBoundary />,
       },
       {
         // register page
         path: "register",
         element: <Login />,
-        loader: async () => {
-          throw new Response("Forbidden", { status: 403 });
-        },
+        // loader: async () => {
+        //   throw new Response("Forbidden", { status: 403 });
+        // },
         errorElement: <ErrorBoundary />,
       },
     ],
