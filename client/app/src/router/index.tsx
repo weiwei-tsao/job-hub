@@ -23,20 +23,20 @@ const router = createBrowserRouter([
     children: [
       {
         // login page
-        path: "login",
-        element: <Login />,
-        loader: async () => {
-          throw new Response("Unauthorized", { status: 401 });
-        },
+        path: "/login",
+        element: <Login isMember={true} />,
+        // loader: async () => {
+        //   throw new Response("Unauthorized", { status: 401 });
+        // },
         errorElement: <ErrorBoundary />,
       },
       {
         // register page
-        path: "register",
-        element: <Login />,
-        loader: async () => {
-          throw new Response("Forbidden", { status: 403 });
-        },
+        path: "/register",
+        element: <Login isMember={false} />,
+        // loader: async () => {
+        //   throw new Response("Forbidden", { status: 403 });
+        // },
         errorElement: <ErrorBoundary />,
       },
     ],
@@ -48,7 +48,7 @@ const router = createBrowserRouter([
     children: [
       {
         // dashboard page
-        path: "dashboard",
+        path: "/dashboard",
         element: <Dashboard />,
         loader: async () => {
           return null;
@@ -57,7 +57,7 @@ const router = createBrowserRouter([
       },
       {
         // all jobs page
-        path: "all-jobs",
+        path: "/all-jobs",
         element: <AllJobs />,
         loader: async () => {
           return null;
@@ -66,7 +66,7 @@ const router = createBrowserRouter([
       },
       {
         // add job page
-        path: "add-job",
+        path: "/add-job",
         element: <AddJob />,
         loader: async () => {
           return null;
@@ -75,7 +75,7 @@ const router = createBrowserRouter([
       },
       {
         // profile page
-        path: "profile",
+        path: "/profile",
         element: <Profile />,
         loader: async () => {
           return;

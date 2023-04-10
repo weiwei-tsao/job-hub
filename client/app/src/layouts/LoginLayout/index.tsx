@@ -5,8 +5,7 @@ interface LoginLayoutProps {}
 
 const LoginLayout: React.FC = (props: LoginLayoutProps) => {
   return (
-    <div>
-      LoginLayout
+    <div className="min-h-screen grid items-center">
       <Outlet />
     </div>
   );
