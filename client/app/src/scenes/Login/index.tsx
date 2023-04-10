@@ -41,15 +41,19 @@ const Login: React.FC = () => {
       </div>
 
       <button className="btn form-submit-btn">Submit</button>
-      <p className="form-hint-p">
+      {/* <p className="form-hint-p">
         Already a member?
         <Link to="login" className="link form-toggle-link">
           Login
         </Link>
-      </p>
+      </p> */}
 
-      {/* <p>Not a member yet?</p>
-      <Link to="register">Register</Link> */}
+      <p className="form-hint-p">
+        Not a member yet?
+        <Link to="/register" className="link form-toggle-link">
+          Register
+        </Link>
+      </p>
     </form>
   );
 };

@@ -7,7 +7,7 @@ const Home: React.FC = () => {
   const navigate = useNavigate();
 
   const handleClick = (event: React.MouseEvent) => {
-    navigate("login");
+    navigate("/login");
   };
   return (
     <main className="block">
