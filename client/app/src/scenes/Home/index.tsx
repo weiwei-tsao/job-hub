@@ -12,41 +12,33 @@ const Home: React.FC = () => {
   return (
     <main className="block">
       {/* Navbar */}
-      <nav className="my-0 mx-auto w-11/12 max-w-6xl h-24 flex items-center justify-start">
+      <nav className="navbar">
         <LogoWithTitle
           logoWidth="w-8"
           logoHeight="h-8"
           titleTextSize="text-4xl"
           titleTextBold="font-bold"
-          titleTextColor="text-sky-600"
+          titleTextColor="text-primary-500"
           titleTextLineHeight="leading-9"
         />
       </nav>
 
       {/* Description and the image */}
-      <section className="min-h-[calc(100vh-6rem)] my-0 mx-auto w-11/12 max-w-6xl grid md:grid-cols-[1fr_1fr] gap-3 items-center">
-        <div className="flex flex-col items-start justify-center gap-5">
-          <h1 className="font-bold text-5xl">
-            Job <span className="text-sky-600">Tracking</span> App
+      <section className="main-section">
+        <div className="main-section-div">
+          <h1 className="div-h1">
+            Job <span className="div-h1-span">Tracking</span> App
           </h1>
-          <p className="text-left max-w-sm text-base text-gray-700">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
-            quisquam itaque dolores facere asperiores expedita magni distinctio
-            nisi quia, quam repellat iure praesentium consequatur est molestias
-            quod vero ducimus harum.
+          <p className="div-p">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis
+            architecto, perspiciatis officiis repudiandae voluptate minus
+            suscipit alias quo incidunt dolores.
           </p>
-          <button
-            className="w-fit h-fit border-s-sky-700 bg-sky-700 text-gray-50 rounded py-2 px-5"
-            onClick={handleClick}
-          >
+          <button className="btn div-btn" onClick={handleClick}>
             Login / Register
           </button>
         </div>
-        <img
-          src={main}
-          alt="main image"
-          className="justify-self-center hidden  md:block md:w-[438px] md:h-[368px]"
-        />
+        <img src={main} alt="main image" className="main-section-img" />
       </section>
     </main>
   );

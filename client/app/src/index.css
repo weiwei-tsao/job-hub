@@ -1,3 +1,123 @@
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Cabin&family=Roboto+Condensed:wght@400;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    @apply text-base;
+  }
+  body {
+    @apply bg-grey-50 font-body font-normal leading-relaxed text-grey-900;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @apply font-heading font-bold my-0 mx-0;
+  }
+
+  h1 {
+    @apply text-6xl;
+  }
+  h2 {
+    @apply text-4xl;
+  }
+  h3 {
+    @apply text-2xl;
+  }
+  h4 {
+    @apply text-xl;
+  }
+  h5 {
+    @apply text-lg;
+  }
+
+  img {
+    @apply w-full block object-cover;
+  }
+
+  p {
+    @apply mb-0 max-w-md;
+  }
+}
+
+/* General */
+.btn {
+  @apply bg-primary-500 hover:bg-primary-700 border-transparent rounded shadow hover:shadow-md text-white tracking-normal transition-default;
+}
+
+.link {
+  @apply bg-transparent cursor-pointer tracking-normal leading-tight;
+}
+
+/* Home */
+.navbar {
+  @apply my-0 mx-auto w-[90vw] max-w-6xl h-24 flex items-center justify-start;
+}
+
+.main-section {
+  @apply min-h-[calc(100vh-6rem)] mt-[-8px] mb-0 mx-auto w-[90vw] max-w-6xl grid md:grid-cols-[55%_45%] md:gap-3 items-center;
+}
+
+.main-section-div {
+  @apply flex flex-col items-start justify-center gap-5;
+}
+
+.div-p {
+  @apply text-left max-w-full md:max-w-[40em];
+}
+.div-h1 {
+  @apply mx-0 mt-0 mb-5 leading-snug tracking-normal md:text-6xl;
+}
+.div-h1-span {
+  @apply text-primary-500;
+}
+
+.div-btn {
+  @apply w-fit h-fit py-2 px-5;
+}
+
+.main-section-img {
+  @apply justify-self-center hidden md:block md:w-[400px] md:h-[336px];
+}
+
+/* Login and Register */
+.form {
+  @apply w-[90vw] justify-self-center border border-solid border-primary-500 rounded-md max-w-[400px] border-t-4 shadow-sm my-3 mx-auto px-8 py-10 hover:shadow-lg;
+}
+
+.form-logo {
+  @apply mt-0 mx-auto mb-5;
+}
+
+.form-title-h3 {
+  @apply text-2xl text-center mt-0 mx-auto mb-5;
+}
+
+.form-row {
+  @apply mb-4;
+}
+
+.form-row-label {
+  @apply block text-sm tracking-normal mb-2;
+}
+
+.form-row-input {
+  @apply w-full h-[35px] bg-grey-50 border-solid border border-grey-200 rounded-md py-1.5 px-3;
+}
+
+.form-submit-btn {
+  @apply mt-4 mb-4 h-[35px] w-full rounded-md py-1.5 px-3;
+}
+
+.form-hint-p {
+  @apply mt-4 mb-0 mx-0 text-center;
+}
+
+.form-toggle-link {
+  @apply py-px px-1.5 text-primary-500;
+}
