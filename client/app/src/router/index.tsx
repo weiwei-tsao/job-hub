@@ -24,7 +24,7 @@ const router = createBrowserRouter([
       {
         // login page
         path: "/login",
-        element: <Login />,
+        element: <Login isMember={true} />,
         // loader: async () => {
         //   throw new Response("Unauthorized", { status: 401 });
         // },
@@ -33,7 +33,7 @@ const router = createBrowserRouter([
       {
         // register page
         path: "/register",
-        element: <Login />,
+        element: <Login isMember={false} />,
         // loader: async () => {
         //   throw new Response("Forbidden", { status: 403 });
         // },

@@ -2,7 +2,13 @@ import React from "react";
 import LogoWithTitle from "../../components/LogoWithTitle";
 import { Link } from "react-router-dom";
 
-const Login: React.FC = () => {
+interface LoginProps {
+  isMember: boolean;
+}
+
+const Login: React.FC<LoginProps> = (props: LoginProps) => {
+  const { isMember } = props;
+
   return (
     <form action="" className="form">
       <div className="form-logo">
@@ -15,7 +21,7 @@ const Login: React.FC = () => {
           titleTextLineHeight="leading-9"
         />
       </div>
-      <h3 className="form-title-h3">Login / Register</h3>
+      <h3 className="form-title-h3">{isMember ? "Login" : "Register"}</h3>
       <div className="form-row">
         <label htmlFor="email" className="form-row-label">
           Email
@@ -41,19 +47,21 @@ const Login: React.FC = () => {
       </div>
 
       <button className="btn form-submit-btn">Submit</button>
-      {/* <p className="form-hint-p">
-        Already a member?
-        <Link to="login" className="link form-toggle-link">
-          Login
-        </Link>
-      </p> */}
-
-      <p className="form-hint-p">
-        Not a member yet?
-        <Link to="/register" className="link form-toggle-link">
-          Register
-        </Link>
-      </p>
+      {!isMember ? (
+        <p className="form-hint-p">
+          Already a member?
+          <Link to="/login" className="link form-toggle-link">
+            Login
+          </Link>
+        </p>
+      ) : (
+        <p className="form-hint-p">
+          Not a member yet?
+          <Link to="/register" className="link form-toggle-link">
+            Register
+          </Link>
+        </p>
+      )}
     </form>
   );
 };
